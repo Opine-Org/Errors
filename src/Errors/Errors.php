@@ -5,11 +5,12 @@ class Errors {
 	private $topic;
 	private $messages = [];
 	private $config;
+	private $separation;
 
 	public function __construct ($config, $topic, $separation) {
 		$this->topic = $topic;
-		$this->response = $response;
 		$this->config = $config;
+		$this->separation = $separation;
 	}
 
 	public function check () {
@@ -44,7 +45,7 @@ class Errors {
 		if (isset($project['mode'])) {
 			$mode = $project['mode'];
 		}
-		if ($mode == 'development') || php_sapi_name() == 'cli') {
+		if ($mode == 'development' || php_sapi_name() == 'cli') {
 			print_r($context);
 			exit;
 		}
