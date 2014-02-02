@@ -1,6 +1,6 @@
 <?php
 /**
- * Opine\Document
+ * Opine\Errors
  *
  * Copyright (c)2013 Ryan Mahoney, https://github.com/virtuecenter <ryan@virtuecenter.com>
  *
