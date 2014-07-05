@@ -72,7 +72,7 @@ class Errors {
             print_r($context);
             exit;
         }
-        $this->separation->app('errors')->layout('errors-' . $mode)->data('errors', $context)->write();
+        $this->separation->app('app/errors')->layout('errors-' . $mode)->data('errors', $context)->write();
         exit;
     }
 
