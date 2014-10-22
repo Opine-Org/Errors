@@ -28,12 +28,12 @@ class Errors {
     private $topic;
     private $messages = [];
     private $config;
-    private $separation;
+    private $layout;
 
-    public function __construct ($config, $topic, $separation) {
+    public function __construct ($config, $topic, $layout) {
         $this->topic = $topic;
         $this->config = $config;
-        $this->separation = $separation;
+        $this->layout = $layout;
     }
 
     public function check () {
@@ -72,7 +72,7 @@ class Errors {
             print_r($context);
             exit;
         }
-        $this->separation->app('app/errors')->layout('errors-' . $mode)->data('errors', $context)->write();
+        $this->layout->app('app/errors')->layout('errors-' . $mode)->data('errors', $context)->write();
         exit;
     }
 
